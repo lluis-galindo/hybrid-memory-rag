@@ -1,0 +1,50 @@
+series: alias
+
+llm:
+  model: "qwen3:14b"
+  base_url: http://localhost:11434
+  temperature: 0.0
+  num_ctx: 8192
+  think: false
+  seed: 7
+
+judge:
+  model: "gemma4:12b-it-qat"
+  base_url: http://localhost:11434
+  temperature: 0.0
+  num_ctx: 4096
+  think: null
+
+embedding:
+  model: bge-m3
+  base_url: http://localhost:11434
+  batch_size: 32
+
+segmentation:
+  min_scene_tokens: 40
+  max_scene_tokens: 700
+  location_breaks: true
+
+retrieval:
+  context_tokens: 4000
+  top_k: 20
+  graph_tokens: 1000
+  memory_tokens: 600
+  memory_top_k: 10
+  max_graph_entities: 6
+  long_context_tokens: 28000
+  long_context_num_ctx: 32768
+
+short_term:
+  budget_tokens: 1500
+  keep_recent_turns: 4
+
+agents:
+  max_search_rounds: 2
+  search_top_k: 10
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  runs_dir: runs
+  cache_dir: .cache
