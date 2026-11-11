@@ -1,8 +1,8 @@
 # Hybrid Short- and Long-Term Memory for Multi-Agent RAG Systems
 
-Master's thesis (TFM) by **Lluís Galindo Vandrell**: narrative understanding over TV series subtitles and transcripts.
+Master's thesis: narrative understanding over TV series subtitles and transcripts.
 The prototype answers questions about a series using only what has happened up to a given episode, and everything
-runs locally with Ollama. The development log is in `docs/TFM_implementation.md`.
+runs locally with Ollama. 
 
 It compares four configurations: B0 (long context), B1 (vector RAG), C1 (vector store + temporal knowledge graph) and
 C2 (C1 + critic agent, built with LangGraph).
